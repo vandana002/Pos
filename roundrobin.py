@@ -26,7 +26,7 @@ def findavgTime(processes, n, bt, quantum):
 	tat = [0] * n
 	findWaitingTime(processes, n, bt,wt, quantum)
 	findTurnAroundTime(processes, n, bt,wt, tat)
-	print("Processes Burst Time	 Waiting",
+	print("Processes | Burst Time | Waiting |",
 					"Time Turn-Around Time")
 	total_wt = 0
 	total_tat = 0
@@ -34,7 +34,7 @@ def findavgTime(processes, n, bt, quantum):
 
 		total_wt = total_wt + wt[i]
 		total_tat = total_tat + tat[i]
-		print(" ", i + 1, "\t\t", bt[i],
+		print(" ", i + 1, "\t", bt[i],
 			"\t\t", wt[i], "\t\t", tat[i])
 
 	print("\nAverage waiting time = %.5f "%(total_wt /n) )
