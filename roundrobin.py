@@ -42,8 +42,12 @@ def findavgTime(processes, n, bt, quantum):
 	
 # Driver code
 if __name__ =="__main__":
-	proc = [1, 2, 3]
-	n = 3
-	burst_time = [10, 5, 8]
-	quantum = 2;
-	findavgTime(proc, n, burst_time, quantum)
+	processes=[]
+	bt=[]
+        n=int(input("enter no.of processes:"))
+        print("enter burst time process:")
+        for i in range(0,n):
+		processes.append(int(i+1))
+        	bt.append(int(input()))
+quantum=int(input("enter time quantum:"))
+gt=[]
